@@ -19,7 +19,7 @@ exports.findOne = async(req, res) => {
         const result = await User.findOne({ username: username})
         res.status(200).json({data: result});
     } catch(err) {
-        console.log('Problem is rending users, ${err}')
+        console.log('Problem in reading users, ${err}')
     }
 }
 
@@ -32,7 +32,7 @@ exports.create = async(req, res) => {
         username: req.body.username,
         password: req.body.password,
         name: req.body.name,
-        surname: re.body.surname,
+        surname: req.body.surname,
         email: req.body.email,
         address: req.body.address,
         phone: req.body.phone,
